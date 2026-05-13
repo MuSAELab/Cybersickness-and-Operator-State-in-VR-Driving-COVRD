@@ -1,4 +1,4 @@
-# Cybersickness-and-Operator-State-in-VR-Driving-
+# Cybersickness and Operator State in VR Driving (COVRD)
 ---
 
 The repository contains scripts and documentation for analyzing the **Cybersickness and Operator State in VR Driving (COVRD)** dataset. This multimodal dataset includes EEG, ECG, and respiration signals collected from 60 participants during simulated driving tasks in Virtual Reality. In addition to physiological recordings, the dataset contains self-reported measures of mental states, including mental workload, stress, and cybersickness levels.
@@ -19,7 +19,7 @@ The dataset signals can be loaded using the `datahandling` class provided in `sr
 ## Using Extracted Features
 ---
 
-Extracted features are avalible each subject and modality with the following settings:
+Pre-processed and extracted features are avalible each subject and modality with the following settings:
 
 | Modality   | Feature Types                              | Window Size (s) | Overlap (s) |
 |------------|---------------------------------------------|-----------------|-------------|
@@ -27,3 +27,9 @@ Extracted features are avalible each subject and modality with the following set
 | ECG        | HRV (Time-Domain)                           | 30              | 0           |
 | Respiration| Breathing Rate (Time-Domain and Spectral)   | 30              | 0           |
 
+The pre-processing performed on the sgnals for extracting features is described below:
+| Modality    | Preprocessing  | Artifact Removal |
+|--------------|--------------------------|-----------|
+| EEG          | 0.5–40 Hz Bandpass Filter | Artifact Subspace Reconstruction (ASR) |
+| ECG          | 0.5–40 Hz Bandpass Filter | R-peak detection + Outlier Removal |
+| Respiration  | Bandpass filtering | None |
