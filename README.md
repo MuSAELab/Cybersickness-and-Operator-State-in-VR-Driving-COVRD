@@ -25,5 +25,5 @@ Extracted features are avalible each subject and modality with the following set
 |------------|---------------------------------------------|-----------------|-------------|
 | EEG        | Power Spectral Density (PSD)                | 3               | 1           |
 | ECG        | HRV (Time-Domain)                           | 30              | 0           |
-| Respiration| Breathing Rate Features                     | 30              | 0           |
+| Respiration| Breathing Rate (Time-Domain and Spectral)   | 30              | 0           |
 
