@@ -16,7 +16,7 @@ To cite the dataset:
 
 The dataset signals can be loaded using the `datahandling` class provided in `src/`. Example code for loading participant data is available in the `loading_subject_data.ipynb` notebook located in the `notebooks/` folder.
 
-## Using Extracted Features
+## Pre-Extracted Features
 ---
 
 Pre-processed and extracted features are avalible each subject and modality with the following settings:
@@ -27,9 +27,9 @@ Pre-processed and extracted features are avalible each subject and modality with
 | ECG        | HRV (Time-Domain)                           | 30              | 0           |
 | Respiration| Breathing Rate (Time-Domain and Spectral)   | 30              | 0           |
 
-The pre-processing performed on the sgnals for extracting features is described below:
+The pre-processing performed on the signals for extracting features is described below:
 | Modality    | Preprocessing  | Artifact Removal |
 |--------------|--------------------------|-----------|
-| EEG          | 0.5–40 Hz Bandpass Filter | Artifact Subspace Reconstruction (ASR) |
-| ECG          | 0.5–40 Hz Bandpass Filter | R-peak detection + Outlier Removal |
+| EEG          | 0.5–40 Hz Bandpass | Artifact Subspace Reconstruction (ASR) |
+| ECG          | 0.5–40 Hz Bandpass | R-peak detection + Outlier Removal |
 | Respiration  | Bandpass filtering | None |
