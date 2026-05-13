@@ -22,7 +22,7 @@ The dataset signals can be loaded using the `datahandling` class provided in `sr
 Pre-processing was first performed on the signals before feature extraction:
 | Modality    | Preprocessing  | Artifact Removal |
 |--------------|--------------------------|-----------|
-| EEG          | 0.5–40 Hz Bandpass | Artifact Subspace Reconstruction (ASR) |
+| EEG          | 0.5–45 Hz Bandpass | Artifact Subspace Reconstruction (ASR) |
 | ECG          | 0.5–40 Hz Bandpass + R-peak detection | RR Outlier Removal |
 | Respiration  | 0.05-1 Hz Bandpass | None |
 
