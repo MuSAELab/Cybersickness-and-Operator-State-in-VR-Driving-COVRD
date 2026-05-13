@@ -14,4 +14,16 @@ To cite the dataset:
 ## Dataset Parsing
 ---
 
-The dataset signals can be loaded using the `datahandling` class provided in src and examples to load participant data are provided in `loading_subject_data.ipynb` jupyter notebook in `notebook/` folder 
+The dataset signals can be loaded using the `datahandling` class provided in `src/`. Example code for loading participant data is available in the `loading_subject_data.ipynb` notebook located in the `notebooks/` folder.
+
+## Using Extracted Features
+---
+
+Extracted features are avalible each subject and modality with the following settings:
+
+| Modality   | Feature Types                              | Window Size (s) | Overlap (s) |
+|------------|---------------------------------------------|-----------------|-------------|
+| EEG        | Power Spectral Density (PSD)                | 3               | 1           |
+| ECG        | HRV (Time-Domain)                           | 30              | 0           |
+| Respiration| Breathing Rate Features                     | 30              | 0           |
+
