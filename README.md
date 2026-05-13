@@ -19,17 +19,19 @@ The dataset signals can be loaded using the `datahandling` class provided in `sr
 ## Pre-Extracted Features
 ---
 
-Pre-processed and extracted features are avalible each subject and modality with the following settings:
-
-| Modality   | Feature Types                              | Window Size (s) | Overlap (s) |
-|------------|---------------------------------------------|-----------------|-------------|
-| EEG        | Power Spectral Density (PSD)                | 3               | 1           |
-| ECG        | HRV (Time-Domain)                           | 30              | 0           |
-| Respiration| Breathing Rate (Time-Domain and Spectral)   | 30              | 0           |
-
-The pre-processing performed on the signals for extracting features is described below:
+Pre-processing was first performed on the signals before feature extraction:
 | Modality    | Preprocessing  | Artifact Removal |
 |--------------|--------------------------|-----------|
 | EEG          | 0.5–40 Hz Bandpass | Artifact Subspace Reconstruction (ASR) |
-| ECG          | 0.5–40 Hz Bandpass | R-peak detection + Outlier Removal |
-| Respiration  | Bandpass filtering | None |
+| ECG          | 0.5–40 Hz Bandpass + R-peak detection | RR Outlier Removal |
+| Respiration  | 0.05-1 Hz Bandpass | None |
+
+Features were extracted as shown in the table below:
+
+| Modality   | Feature Types                              | Window Size (s) | Overlap (s) | Filename |
+|------------|---------------------------------------------|-----------------|-------------|---------|
+| EEG        | Power Spectral Density (PSD)                | 3               | 1           | eeg_features.csv |
+| ECG        | HRV (Time-Domain)                           | 30              | 0           | hrv_features.csv |
+| Respiration| Breathing Rate (Time-Domain and Spectral)   | 30              | 0           | br_features.csv |
+
+
