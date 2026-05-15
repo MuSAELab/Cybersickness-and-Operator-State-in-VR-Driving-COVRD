@@ -6,7 +6,7 @@ The repository contains scripts and documentation for analyzing the **Cybersickn
 ## Downloading the Dataset
 ---
 
-The dataset is available on the Federated Research Data Repository ([link](https://www.frdr-dfdr.ca/repo/dataset/)):
+The repository only contains a sample of the dataset for use in the python notebook. The full dataset is available on the Federated Research Data Repository ([link](https://www.frdr-dfdr.ca/repo/dataset/)):
 
 To cite the dataset:
 
@@ -14,7 +14,7 @@ To cite the dataset:
 ## Dataset Parsing
 ---
 
-The dataset signals can be loaded using the `datahandling` class provided in `src/`. Example code for loading participant data is available in the `loading_subject_data.ipynb` notebook located in the `notebooks/` folder.
+The dataset signals can be loaded using the `datahandling` file provided in `code/`. Example code for loading participant data (both raw signals and features) is available in the `loading_subject_data.ipynb` notebook.
 
 ## Pre-Extracted Features
 ---
@@ -30,8 +30,14 @@ Features were extracted as shown in the table below:
 
 | Modality   | Feature Types                              | Window Size (s) | Overlap (s) | Filename |
 |------------|---------------------------------------------|-----------------|-------------|---------|
-| EEG        | Power Spectral Density (PSD)                | 8               | 4           | `eeg_features.csv` |
-| ECG        | HRV (Time-Domain)                           | 30              | 0           | `hrv_features.csv` |
-| Respiration| Breathing Rate (Time-Domain and Spectral)   | 30              | 0           | `br_features.csv` |
+| EEG        | Power Spectral Density (PSD)                | 8               | 4           | `eeg_features_w8_o4.csv` |
+| ECG        | HRV (Time-Domain)                           | 30              | 15           | `hrv_features_w30_o15.csv` |
+| Respiration| Breathing Rate (Time-Domain and Spectral)   | 30              | 15           | `br_features_w30_o15.csv` |
+
+## Survey and Other Information
+
+The subjective ratings (NASA-TLX, DASS-21 and SSQ) and demographic information are avalible both in raw and processed formats. 
+
+Additionally, information about the power line frequency (notch filter frequcy) for the dataset is provided for subject to subject basis as data collection was done both in Europe and America.
 
 
