@@ -30,8 +30,8 @@ Features were extracted as shown in the table below:
 
 | Modality   | Feature Types                              | Window Size (s) | Overlap (s) | Filename |
 |------------|---------------------------------------------|-----------------|-------------|---------|
-| EEG        | Power Spectral Density (PSD)                | 3               | 1           | eeg_features.csv |
-| ECG        | HRV (Time-Domain)                           | 30              | 0           | hrv_features.csv |
-| Respiration| Breathing Rate (Time-Domain and Spectral)   | 30              | 0           | br_features.csv |
+| EEG        | Power Spectral Density (PSD)                | 8               | 4           | `eeg_features.csv` |
+| ECG        | HRV (Time-Domain)                           | 30              | 0           | `hrv_features.csv` |
+| Respiration| Breathing Rate (Time-Domain and Spectral)   | 30              | 0           | `br_features.csv` |
 
 
