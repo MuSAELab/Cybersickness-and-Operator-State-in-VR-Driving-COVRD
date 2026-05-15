@@ -68,4 +68,48 @@ class LoadStudyData:
         df_rpeak = self._load_data(feature_filename = self._rpeak_filename)
         return df_rpeak, self.fs_ECG
 
+
+
+class LoadExtractedFeatures:
+    def __init__(self,
+                 base_folder: str = './data',
+                 experiment: Literal['1_MW', '2_Stress', '3_MW_Stress'] = '1_MW',
+                 ):
+
+        self._base_folder = base_folder
+        self._experiment = experiment
+        self._hrv_filename = 'hrv_features_w30_o15.csv'
+        self._br_filename = 'br_features_w30_o15.csv'
+        self._eeg_filename = 'eeg_features_w8_o4.csv'
+        self.data_path = os.path.join(self._base_folder, 
+                                      self._experiment, 
+                                      )
+        
+
+    def load_subject_info(self, subject_id: str, condition: Literal[1,2,3,4]):
+        self._subject_id = subject_id
+        self._condition = condition
+
+    def _load_data(self, feature_filename: str = None):
+        self.file_path = os.path.join(self.data_path, 
+                                      self._subject_id, 
+                                      'condition_' + str(self._condition))
+
+        df_data = pd.read_csv(os.path.join(self.file_path, feature_filename))
+
+        return df_data
+    
+    def get_features(self, feature_type: Literal['eeg', 'hrv', 'br'] = 'eeg'):
+        if feature_type == 'eeg':
+            filename = self._eeg_filename
+        elif feature_type == 'hrv':
+            filename = self._hrv_filename
+        elif feature_type == 'br':
+            filename = self._br_filename
+        df = self._load_data(feature_filename = filename)
+        
+        return df
+    
+
+
         
