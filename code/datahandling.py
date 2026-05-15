@@ -53,7 +53,7 @@ class LoadStudyData:
         
         return brSig, self.fs_BR
     
-    def get_raw_eeg(self):
+    def get_raw_eeg(self, convert_to_uv: bool = True):
         df_eeg  = pd.read_csv(os.path.join(self.file_path, self._eeg_filename))
         fs_eeg = df_eeg.SamplingRate.iloc[0]
         df_eeg.drop(columns = ['SamplingRate', 'TimeStamp', 'Converted_Timestamp'], axis = 1, inplace = True)
@@ -61,7 +61,9 @@ class LoadStudyData:
         replace_ch_dict = {'FP1': 'Fp1', 'FP2': 'Fp2', 'FPZ': 'Fpz', 'OZ': 'Oz'}
         channel_names = [replace_ch_dict.get(x, x) for x in channel_names]
         df_eeg.columns = channel_names
-
+        # converting to microvolts from raw ADC values
+        if convert_to_uv:
+            df_eeg = df_eeg*0.02235
         return df_eeg, fs_eeg
     
     def get_rpeak(self):
