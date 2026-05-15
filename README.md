@@ -38,6 +38,6 @@ Features were extracted as shown in the table below:
 
 The subjective ratings (NASA-TLX, DASS-21 and SSQ) and demographic information are avalible both in raw and processed formats. 
 
-Additionally, information about the power line frequency (notch filter frequcy) for the dataset is provided for subject to subject basis as data collection was done both in Europe and America.
+Additionally, information about the power line frequency noise (for notch filtering) for the dataset is provided for each subject as data collection was done both in Europe and America.
 
 
