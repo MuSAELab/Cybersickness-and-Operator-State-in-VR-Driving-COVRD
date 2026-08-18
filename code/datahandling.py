@@ -14,7 +14,7 @@ class LoadStudyData:
         self._ecgraw_filename = 'ECGRaw.csv'
         self._brraw_filename = 'BreathingRaw.csv'
         self._rpeak_filename = 'rpeak_signal.csv'
-        self._eeg_filename = 'EEG_Data.csv'
+        self._eeg_filename = 'EEGRaw.csv'
         self.fs_ECG = 250
         self.fs_BR = 18
         self.data_path = os.path.join(self._base_folder, 
@@ -29,7 +29,7 @@ class LoadStudyData:
     def _load_data(self, feature_filename: str = None):
         self.file_path = os.path.join(self.data_path, 
                                       self._subject_id, 
-                                      'condition_' + str(self._condition))
+                                      'phase_' + str(self._condition))
 
         df_data = pd.read_csv(os.path.join(self.file_path, feature_filename))
 
@@ -54,7 +54,7 @@ class LoadStudyData:
         return brSig, self.fs_BR
     
     def get_raw_eeg(self, convert_to_uv: bool = True):
-        df_eeg  = pd.read_csv(os.path.join(self.file_path, self._eeg_filename))
+        df_eeg  = self._load_data(self._eeg_filename)
         fs_eeg = df_eeg.SamplingRate.iloc[0]
         df_eeg.drop(columns = ['SamplingRate', 'TimeStamp', 'Converted_Timestamp'], axis = 1, inplace = True)
         channel_names = [ch_.split('_')[1] for ch_ in df_eeg.columns]
@@ -80,9 +80,9 @@ class LoadExtractedFeatures:
 
         self._base_folder = base_folder
         self._experiment = experiment
-        self._hrv_filename = 'hrv_features_w30_o15.csv'
-        self._br_filename = 'br_features_w30_o15.csv'
-        self._eeg_filename = 'eeg_features_w8_o4.csv'
+        self._hrv_filename = 'features_hrv__w30_o15.csv'
+        self._br_filename = 'features_br_w30_o15.csv'
+        self._eeg_filename = 'features_eeg_w8_o4.csv'
         self.data_path = os.path.join(self._base_folder, 
                                       self._experiment, 
                                       )
@@ -95,7 +95,7 @@ class LoadExtractedFeatures:
     def _load_data(self, feature_filename: str = None):
         self.file_path = os.path.join(self.data_path, 
                                       self._subject_id, 
-                                      'condition_' + str(self._condition))
+                                      'phase_' + str(self._condition))
 
         df_data = pd.read_csv(os.path.join(self.file_path, feature_filename))
 
