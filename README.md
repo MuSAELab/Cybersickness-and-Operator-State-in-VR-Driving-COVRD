@@ -127,7 +127,7 @@ Phases 1–3 are common across all participants and conditions. Each experimenta
 | **`ECGRaw.csv`** | Raw ECG data per phase, collected via Bioharness 3 at 250 Hz. |
 | **`EEGRaw.csv`** | Raw EEG data collected with the Kaptics instrumented VR headset (channels: Fp1, Fpz, Fp2, F1, F2, C1, C2, P3, P4, O1, Oz, O2; dry electrodes, 250 Hz). |
 | **`HeadMovement_AccRaw.csv`** | Raw head movement data (3-axis accelerometer, 250 Hz) from the Kaptics headset/acquisition board. |
-| **`EOGRaw.csv`** | Raw EOG data from 7 electrodes on the HMD face cushion (frontal, horizontal, and vertical channels), 250 Hz. |
+| **`EOGRaw.csv`** | Raw EOG data from 4 electrodes on the HMD face cushion (frontal, horizontal, and vertical channels), 250 Hz. |
 | **`features_eeg_w8_o4.csv`** | Benchmark power spectral density (PSD) EEG features from 8 s epochs with 4 s overlap. |
 | **`features_hrv_w30_o15.csv`** | Benchmark time-domain HRV features from 30 s epochs with 15 s overlap. Includes `rr_coverage` (0–100), an ECG quality metric per epoch. |
 | **`features_br_w30_o15.csv`** | Benchmark time- and frequency-domain breathing-rate features from 30 s epochs with 15 s overlap. |
