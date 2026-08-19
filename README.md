@@ -25,10 +25,6 @@ The repository contains scripts and documentation for analyzing the **Cybersickn
 
 **Title:** Cybersickness and Operator State in VR Driving (COVRD) Dataset
 
-**Date of data collection:** 2025-01-01 to 2026-01-01
-
-**Geographic location of data collection:** Montreal, Quebec, Canada
-
 **Related publication:** *A Multimodal Dataset for the Study of Cybersickness Under Stress and Mental Workload During Immersive VR Driving* (submitted to Frontiers in Neuroergonomics; link will be added upon publication)
 
 ---
