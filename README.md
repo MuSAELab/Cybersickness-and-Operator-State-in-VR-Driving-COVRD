@@ -208,15 +208,9 @@ An RR quality metric was computed as the proportion of accepted RR intervals rel
 
 **Co-Investigators**
 - Abhishek Tiwari — INRS-EMT — abhishek.tiwari@inrs.ca
-- Marc-Antoine Moinnereau — INRS-EMT — marc-antoine.moinnereau@kaptics.com
-- Danielle Benesch — Thales, CortAIx Labs — danielle.benesch@thalesdigitalsolutions.ca
-- Nicole Bolt — University of Saskatchewan — nicole.Bolt@rcmp-grc.gc.ca
-- Gregory Krätzig — University of Regina — gregory.Kratzig@rcmp-grc.gc.ca
-- Simon Paré — Public Safety Canada — simon6449@smtp.gc.ca
+- Marc-Antoine Moinnereau - INRS-EMT
+- Danielle Benesch — Thales, CortAIx Labs 
+- Nicole Bolt — University of Saskatchewan
+- Gregory Krätzig — University of Regina 
+- Simon Paré — Public Safety Canada 
 
-**Roles**
-- Data Collection: Marc-Antoine Moinnereau
-- Processing/Analysis: Abhishek Tiwari
-- Submission: Abhishek Tiwari
-
-**Related resources:** [GitHub repository](https://github.com/MuSAELab/Cybersickness-and-Operator-State-in-VR-Driving-COVRD)
