@@ -140,8 +140,6 @@ Phases 1–3 are common across all participants and conditions. Each experimenta
 | **`eeg_signal_quality.csv`** | Documents bad EEG channels for all subjects, phases, and conditions. |
 | **`eeg_notch_filtering_info.csv`** | Documents powerline frequency (50 Hz or 60 Hz) per subject/phase/condition, based on data collection site (Europe or America). |
 
-**Multiple dataset versions?** No — this is a single-version release.
-
 ---
 
 ## Dataset Parsing
