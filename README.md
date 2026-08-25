@@ -25,10 +25,6 @@ The repository contains scripts and documentation for analyzing the **Cybersickn
 
 **Title:** Cybersickness and Operator State in VR Driving (COVRD) Dataset
 
-**Date of data collection:** 2025-01-01 to 2026-01-01
-
-**Geographic location of data collection:** Montreal, Quebec, Canada
-
 **Related publication:** *A Multimodal Dataset for the Study of Cybersickness Under Stress and Mental Workload During Immersive VR Driving* (submitted to Frontiers in Neuroergonomics; link will be added upon publication)
 
 ---
@@ -131,7 +127,7 @@ Phases 1–3 are common across all participants and conditions. Each experimenta
 | **`ECGRaw.csv`** | Raw ECG data per phase, collected via Bioharness 3 at 250 Hz. |
 | **`EEGRaw.csv`** | Raw EEG data collected with the Kaptics instrumented VR headset (channels: Fp1, Fpz, Fp2, F1, F2, C1, C2, P3, P4, O1, Oz, O2; dry electrodes, 250 Hz). |
 | **`HeadMovement_AccRaw.csv`** | Raw head movement data (3-axis accelerometer, 250 Hz) from the Kaptics headset/acquisition board. |
-| **`EOGRaw.csv`** | Raw EOG data from 7 electrodes on the HMD face cushion (frontal, horizontal, and vertical channels), 250 Hz. |
+| **`EOGRaw.csv`** | Raw EOG data from 4 electrodes on the HMD face cushion (frontal, horizontal, and vertical channels), 250 Hz. |
 | **`features_eeg_w8_o4.csv`** | Benchmark power spectral density (PSD) EEG features from 8 s epochs with 4 s overlap. |
 | **`features_hrv_w30_o15.csv`** | Benchmark time-domain HRV features from 30 s epochs with 15 s overlap. Includes `rr_coverage` (0–100), an ECG quality metric per epoch. |
 | **`features_br_w30_o15.csv`** | Benchmark time- and frequency-domain breathing-rate features from 30 s epochs with 15 s overlap. |
@@ -143,8 +139,6 @@ Phases 1–3 are common across all participants and conditions. Each experimenta
 | **`processed_merged_ratings_and_demo.csv`** | Merged `processed_demo_info.csv` and `processed_ratings.csv` for streamlined downstream analysis. |
 | **`eeg_signal_quality.csv`** | Documents bad EEG channels for all subjects, phases, and conditions. |
 | **`eeg_notch_filtering_info.csv`** | Documents powerline frequency (50 Hz or 60 Hz) per subject/phase/condition, based on data collection site (Europe or America). |
-
-**Multiple dataset versions?** No — this is a single-version release.
 
 ---
 
@@ -214,15 +208,9 @@ An RR quality metric was computed as the proportion of accepted RR intervals rel
 
 **Co-Investigators**
 - Abhishek Tiwari — INRS-EMT — abhishek.tiwari@inrs.ca
-- Marc-Antoine Moinnereau — INRS-EMT — marc-antoine.moinnereau@kaptics.com
-- Danielle Benesch — Thales, CortAIx Labs — danielle.benesch@thalesdigitalsolutions.ca
-- Nicole Bolt — University of Saskatchewan — nicole.Bolt@rcmp-grc.gc.ca
-- Gregory Krätzig — University of Regina — gregory.Kratzig@rcmp-grc.gc.ca
-- Simon Paré — Public Safety Canada — simon6449@smtp.gc.ca
+- Marc-Antoine Moinnereau - INRS-EMT
+- Danielle Benesch — Thales, CortAIx Labs 
+- Nicole Bolt — University of Saskatchewan
+- Gregory Krätzig — University of Regina 
+- Simon Paré — Public Safety Canada 
 
-**Roles**
-- Data Collection: Marc-Antoine Moinnereau
-- Processing/Analysis: Abhishek Tiwari
-- Submission: Abhishek Tiwari
-
-**Related resources:** [GitHub repository](https://github.com/MuSAELab/Cybersickness-and-Operator-State-in-VR-Driving-COVRD)
