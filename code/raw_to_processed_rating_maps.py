@@ -4,9 +4,6 @@ raw_to_processed_mapping.py
 Data dictionary documenting how raw_demographic_info.csv fields map to
 processed_demo_info.csv (and, by extension, processed_merged_ratings_and_demo.csv).
 
-Reverse-engineered by cross-referencing every row of the two files
-(joined on Condition/Participants == exp/subjects) -- these are the
-actual value pairs that occur in the data, not assumptions.
 """
 
 # --- Column renames (values pass through unchanged) -----------------------
@@ -19,7 +16,7 @@ COLUMN_RENAME_MAP = {
     "Not being able to stop or control worrying?":                    "gad_2",
     "Worrying too much about different things?":                      "gad_3",
     "Trouble relaxing?":                                              "gad_4",
-    "Being so restless that it\u2019s hard to sit still?":            "gad_5",
+    "Being so restless that it's hard to sit still?":                 "gad_5",
     "Becoming easily annoyed or irritable?":                          "gad_6",
     "Feeling afraid as if something awful might happen?":             "gad_7",
 }
