@@ -170,7 +170,8 @@ Features were then extracted as follows:
 
 ## Methodological Information
 
-**EEG:** Preprocessed using the EEGLAB toolbox in MATLAB. A 0.5–45 Hz bandpass filter was applied first, followed by artifact removal (eye blinks, muscle/eye movement) using ASR with default EEGLAB parameters. Cleaned signals were re-referenced to the average and decomposed into delta (0.5–4 Hz), theta (4–8 Hz), alpha (8–12 Hz), beta (12–30 Hz), and low gamma (30–45 Hz) bands. Signals were epoched into 8 s windows with 50% overlap, and normalized power spectral features were extracted per epoch.
+**EEG:** Quality assessment of EEG channels was first performed. Bad channels were defined as those exhibiting an 
+absolute amplitude < 0.5 uV for more than 98% of a given driving phase, indicating near-flat or non-informative signal behavior. Preprocessed using the EEGLAB toolbox in MATLAB. A 0.5–45 Hz bandpass filter was applied first, followed by artifact removal (eye blinks, muscle/eye movement) using ASR with default EEGLAB parameters. Cleaned signals were re-referenced to the average and decomposed into delta (0.5–4 Hz), theta (4–8 Hz), alpha (8–12 Hz), beta (12–30 Hz), and low gamma (30–45 Hz) bands. Signals were epoched into 8 s windows with 50% overlap, and normalized power spectral features were extracted per epoch.
 
 **ECG:** RR intervals were detected per driving phase using the NeuroKit2 Python package. Signals were epoched into 30 s windows with 50% overlap. RR outlier filtering was then applied:
 - **Range-based filter:** only RR intervals between 400–1500 ms are retained.
