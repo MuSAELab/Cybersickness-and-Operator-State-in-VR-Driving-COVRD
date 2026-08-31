@@ -188,8 +188,9 @@ An RR quality metric was computed as the proportion of accepted RR intervals rel
 
 ## Data Quality and Missing Data
 
-- **EEG:** Features were not generated for files with one or more missing channels (see `eeg_signal_quality.csv`) or for files that failed ASR-based artifact removal due to excessive noise or highly correlated channels.
+- **EEG:** Features were not generated for files with one or more missing channels (see `eeg_signal_quality.csv`) or for files that failed ASR-based artifact removal due to channels with excessive noise or highly correlated channels.
 - **HRV/BR:** Feature files are missing when no epochs within a file passed the quality criteria; individual rows are missing/empty when specific epochs were rejected.
+
 
 **Known instances:**
 
@@ -200,6 +201,29 @@ An RR quality metric was computed as the proportion of accepted RR intervals rel
 | `3_MW_Stress/S13/phase_1/features_hrv_w30_o15.csv` | Rows for the 5th and 6th epochs are empty. |
 
 ---
+
+For EEG data, the files with bad channels include:
+
+| Experimental Condition | Subject | Driving Phase(s) | Bad Channels   |
+| ---------------------- | ------- | ---------------- | -------------- |
+| MW                     | S04     | 1–4              | F2             |
+| MW                     | S07     | 1–4              | C2             |
+| MW                     | S09     | 1–2              | P3, O1, Oz, O2 |
+| MW                     | S09     | 3                | Oz, O2         |
+| MW                     | S09     | 4                | O1, Oz, O2     |
+| Stress                 | S07     | 1–3              | F2, C2         |
+| Stress                 | S07     | 4                | F2, C2, P4     |
+| Stress                 | S08     | 1                | F2, C2         |
+| Stress                 | S08     | 2                | F2, P3, Oz     |
+| Stress                 | S08     | 3                | F2             |
+| Stress                 | S09     | 1                | F2             |
+| Stress                 | S09     | 2                | F1             |
+| Stress                 | S09     | 3                | F1, C1, P4     |
+| Stress                 | S09     | 4                | F1, P4         |
+| Stress                 | S17     | 3                | C2             |
+
+*Table: EEG channels that did not pass the bad channel quality criteria.*
+
 
 ## Contributors
 
