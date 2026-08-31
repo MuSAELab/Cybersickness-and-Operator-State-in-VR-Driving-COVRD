@@ -201,7 +201,6 @@ An RR quality metric was computed as the proportion of accepted RR intervals rel
 | `2_Stress/S04/phase_4/features_br_w30_o15.csv` | Row for the 4th epoch is empty. |
 | `3_MW_Stress/S13/phase_1/features_hrv_w30_o15.csv` | Rows for the 5th and 6th epochs are empty. |
 
----
 
 For EEG data, the files with bad channels include:
 
@@ -224,6 +223,25 @@ For EEG data, the files with bad channels include:
 | Stress                 | S17     | 3                | C2             |
 
 *Table: EEG channels that did not pass the bad channel quality criteria.*
+
+**Subjects with Different Sampling Rate Settings**
+
+The following subjects have different sampling rate settings for EOG and EEG data than the standard 250 Hz:
+
+* **EEG and EOG:** fs = 125 Hz
+* **Head movement:** fs = 200 Hz
+
+| Experimental Condition | Subject | Driving Phase(s) |
+| ---------------------- | ------- | ---------------- |
+| MW                     | S19     | 1–4              |
+| MW                     | S20     | 1–4              |
+| Stress                 | S18     | 1–4              |
+| MW + S                 | S17     | 1–4              |
+
+*Table: Subjects with different sampling rate settings for EEG, EOG (fs = 125 Hz), and head movement (fs = 200 Hz) data.*
+
+---
+
 
 
 ## Contributors
