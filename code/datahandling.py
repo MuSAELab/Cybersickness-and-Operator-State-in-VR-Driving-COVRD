@@ -240,7 +240,7 @@ class LoadStudyData:
         
         return brSig, self.fs_BR, missing_percent
     
-    def get_raw_eeg(self, convert_to_uv: bool = True):
+    def get_raw_eeg(self, convert_to_v: bool = True):
         df_eeg  = self._load_data(self._eeg_filename)
         fs_eeg = df_eeg.SamplingRate.iloc[0]
         df_eeg.drop(columns = ['SamplingRate', 'TimeStamp', 'Converted_Timestamp'], axis = 1, inplace = True)
@@ -249,17 +249,17 @@ class LoadStudyData:
         channel_names = [replace_ch_dict.get(x, x) for x in channel_names]
         df_eeg.columns = channel_names
         # converting to microvolts from raw ADC values for Kaptics headset
-        if convert_to_uv:
-            df_eeg = df_eeg*0.02235
+        if convert_to_v:
+            df_eeg = df_eeg/(1e6)
         return df_eeg, fs_eeg
 
-    def get_raw_eog(self, convert_to_uv: bool = True):
+    def get_raw_eog(self, convert_to_v: bool = True):
             df_eog  = self._load_data(self._eog_filename)
             fs_eog = df_eog.SamplingRate.iloc[0]
             df_eog.drop(columns = ['SamplingRate', 'TimeStamp'], axis = 1, inplace = True)
             # converting to microvolts from raw ADC values for Kaptics headset
-            if convert_to_uv:
-                df_eog = df_eog*0.02235
+            if convert_to_v:
+                df_eog = df_eog/(1e6)
             return df_eog, fs_eog
 
     def get_raw_headmovement(self):
