@@ -33,7 +33,7 @@ The repository contains scripts and documentation for analyzing the **Cybersickn
 
 This repository contains only a sample of the dataset for use with the provided Python notebook. The full dataset is available on the Federated Research Data Repository:
 
-🔗 [https://www.frdr-dfdr.ca/repo/dataset/](https://www.frdr-dfdr.ca/repo/dataset/)
+🔗 [https://www.frdr-dfdr.ca/repo/dataset/](https://doi.org/10.20383/103.01679)
 
 ---
 
